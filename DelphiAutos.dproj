@@ -1,0 +1,332 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E5F0A35E-41D6-4AE9-8EFE-94A5F1FC9FE8}</ProjectGuid>
+        <ProjectVersion>14.6</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>DelphiAutos.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_UsePackage>ShortcutBarD7;AxPageProducerD7;vclIEAddress;DBXSqliteDriver;fmx;TaskSchedulerAx;RemObjects_BPDX_D7;IndySystem;TeeDB;XMLBBoxD18;ExitDialogsD7;inetdbbde;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;BaseBBoxD18;dbxcds;dxSkinsCoreD7;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxSkinscxPCPainterD7;vcldb;vcldsnap;RemObjects_Synapse_D7;DCPdelphi2007;IcsDel70;DBXDb2Driver;MenuXPD7;DBXOracleDriver;CustomIPTransport;UnicodeConvDelphi7;vclribbon;dsnap;IndyIPServer;SebsComponents;fmxase;vcl;IndyCore;DBXMSSQLDriver;CloudService;IndyIPCommon;FmxTeeUI;Quickrep505;AxXmlComponentsD7;inetdbxpress;webdsnap;vclAxCRCD7;ROFIleSessions;adortl;TIE_http_https;AxXPbuttonD7;bindcompfmx;RemObjects_Indy_D7;vcldbx;XMLBBoxSecD18;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;vclAxDock;Tee;DBXOdbcDriver;xmlrtl;svnui;ibxpress;vclDrawButtonD7;IndyProtocols;DBXMySQLDriver;ComponentConnectionTG;IndyWithActionsD7;bindengine;vclactnband;bindcompdbx;FMXTee;soaprtl;TeeUI;bindcompvcl;PKIBBoxD18;vclie;MSNPopupPak;vcltouch;VclSmp;RemObjects_RODX_D7;DBXInformixDriver;Intraweb;axShape;PGPBBoxD18;DataSnapConnectors;RemObjects_WebBroker_D7;DBXFirebirdDriver;dsnapcon;AxDECD7;inet;fmxobj;NetAPITG;HTMLPopupPkgd7;vclx;svn;DBXSybaseASADriver;fmxdae;TecladoD7;bdertl;AxMiTeCD7;cxPageControlD7;dbexpress;DataSnapIndy10ServerTransport;vclAxdebugMessagesD7;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;fmx;IndySystem;TeeDB;XMLBBoxD18;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;BaseBBoxD18;dbxcds;dxSkinsCoreD7;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxSkinscxPCPainterD7;vcldb;vcldsnap;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;DBXMSSQLDriver;CloudService;IndyIPCommon;FmxTeeUI;inetdbxpress;webdsnap;adortl;bindcompfmx;XMLBBoxSecD18;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;Tee;DBXOdbcDriver;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;bindengine;vclactnband;bindcompdbx;FMXTee;soaprtl;TeeUI;bindcompvcl;PKIBBoxD18;vclie;vcltouch;VclSmp;DBXInformixDriver;Intraweb;PGPBBoxD18;DataSnapConnectors;DBXFirebirdDriver;dsnapcon;inet;fmxobj;vclx;DBXSybaseASADriver;fmxdae;cxPageControlD7;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="uFrmMain.pas">
+            <Form>frmMain</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uMessageBoxEx.pas">
+            <Form>frmMessageBoxEx</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Vistas\Propietarios\uFrmPropietarios.pas">
+            <Form>frmPropietarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Vistas\Propietarios\uFrmAddClientes.pas">
+            <Form>frmAddClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Vistas\Vehiculos\uFrmVehiculos.pas">
+            <Form>frmVehiculos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Vistas\Vehiculos\uFrmAddVehiculos.pas">
+            <Form>FrmAddVehiculos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Conexion\uDMConexion.pas">
+            <Form>DMConexion</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Vistas\MarcaMod\uFrmMarcaMod.pas">
+            <Form>frmMarcaMod</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Vistas\MarcaMod\uFrmAgregarMarcaMod.pas">
+            <Form>frmAgregarMarcaMod</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Validador\uValidator.pas"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">8192</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                    <VersionInfoKeys Name="CFBundleName"/>
+                    <VersionInfoKeys Name="CFBundleDisplayName"/>
+                    <VersionInfoKeys Name="UIDeviceFamily"/>
+                    <VersionInfoKeys Name="CFBundleIdentifier"/>
+                    <VersionInfoKeys Name="CFBundleVersion"/>
+                    <VersionInfoKeys Name="CFBundlePackageType"/>
+                    <VersionInfoKeys Name="CFBundleSignature"/>
+                    <VersionInfoKeys Name="CFBundleAllowMixedLocalizations"/>
+                    <VersionInfoKeys Name="UISupportedInterfaceOrientations"/>
+                    <VersionInfoKeys Name="CFBundleExecutable"/>
+                    <VersionInfoKeys Name="CFBundleResourceSpecification"/>
+                    <VersionInfoKeys Name="LSRequiresIPhoneOS"/>
+                    <VersionInfoKeys Name="CFBundleInfoDictionaryVersion"/>
+                    <VersionInfoKeys Name="CFBundleDevelopmentRegion"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">DelphiAutos.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k180.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp180.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\AxdebugMessagesADO.bpl">Debug Messages to a Connection with ADO</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\AxdebugMessagesToRemObjects.bpl">Debug Messages To a connection with RemObjects</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclAddTgD7.bpl">Axoft - Additonal and DB Controls 2.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclADOClienteTGD7.bpl">Axoft -  ADO Cliente Designtime</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclCommandTGD7.bpl">Axoft - CommandTG Designtime</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\DclControlesTangoBaseD7.bpl">Controles DB Tango-Tiris BASE</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\DclControlesTangoD7.bpl">Controles DB Tango-Tiris SQL</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclcxGridFinder.bpl">Axoft - cxGrid Finder Design</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclDbListViewAx.bpl">Axoft - DBListView Design</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclDxDbGridD7.bpl">Axoft - Grilla Outlook TG Designtime</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclDxGridContainerTgD7.bpl">Axoft - DxDbGridContainerAX</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclDxGridContainerToolbarTgD7.bpl">Axoft - DxDbGridContainerToolbarAx</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclFieldstgD7.bpl">Axoft - FieldsTG 1.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\DCLSQLComponents.bpl">Axoft - Componetes para SQL</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\dclStdtgD7.bpl">Axoft - Standard Components 2.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\FlashXMLControlFusionChart.bpl">Axoft - Fusion Chart Control</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\LiveGradientPanel.bpl">Live - Gradient Panel</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\SQLBrowseForFolder.bpl">Axoft - SQL Browse For Folder</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\vclDBTreePrntTgD7.bpl">Axoft - DBTreePrinting Tool</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponents\Bpl\vclPrntDestTgD7.bpl">Axoft - Printing Destination</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\A405_D70.bpl">TurboPower Async Professional 4.05 Designtime Package - VCL70</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\acQueryBuilderDsgnADOD7.bpl">Active Query Builder ADO Connectivity</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\acQueryBuilderDsgnD7.bpl">Active Query Builder Core</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\AxHTMLPopupTimeoutD7.bpl">HTMLPopupTimeout</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\AxTeclado.bpl">Axoft - Teclado para Resto</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\B304vd70.bpl">TurboPower Abbrevia 3.04 Design-time package - VCL70</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\BcBarMenusD70.bpl">Bluecave: BarMenus Components (Designtime)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclAxButtonEdit.bpl">Axoft - ButtonEdit</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclAxLookupComboBox.bpl">Axoft - LookupComboBox</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxBarEditItemD7.bpl">ExpressBars cxEditor item by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxEditorFieldLinkD7.bpl">ExpressEditors FieldLink by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxEditorsD7.bpl">ExpressEditors Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxGridD7.bpl">ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxLibraryD7.bpl">Express Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxPageControlD7.bpl">ExpressPageControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxPageControldxBarPopupMenuD7.bpl">ExpressPageControl dxBar Popup Menu by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxPivotGridChartD7.bpl">ExpressPivotGrid connection to ExpressQuantumGrid Chart View by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxPivotGridD7.bpl">ExpressPivotGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxPivotGridOLAPD7.bpl">ExpressPivotGrid OLAP by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxSchedulerD7.bpl">ExpressScheduler by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxSchedulerGridD7.bpl">ExpressScheduler connection to ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxSpreadSheetD7.bpl">ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxTreeListD7.bpl">ExpressQuantumTreeList by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxTreeListdxBarPopupMenuD7.bpl">ExpressQuantumTreeList dxBar Built-In Menu by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclcxVerticalGridD7.bpl">ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldlgtgD7.bpl">Axoft - Dialogos en Castellano 2.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxADOServerModeD7.bpl">ADO Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxBarD7.bpl">ExpressBars by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxBarDBNavD7.bpl">ExpressBars DBNavigator by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxBarExtDBItemsD7.bpl">ExpressBars extended DB items by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxBarExtItemsD7.bpl">ExpressBars extended items by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxCoreD7.bpl">ExpressCoreLibrary by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxDBOrD7.bpl">ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxdbtrD7.bpl">ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxDBXServerModeD7.bpl">dbExpress Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxDockControlTGD7.bpl">Axoft - ExpressDocking Design Library</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxDockingD7.bpl">ExpressDocking Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxEdtrD7.bpl">Express inplace editors</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxELibD7.bpl">ExpressEditors Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxExELD7.bpl">ExpressEditors Library (Extended) by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxFlowChartD7.bpl">ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxGrEdD7.bpl">Express extended inplace editors</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxLayoutControlD7.bpl">ExpressLayout Control by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxmdsD7.bpl">ExpressMemData by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxNavBarD7.bpl">ExpressNavBar by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxOrgCD7.bpl">ExpressOrgChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSCoreD7.bpl">ExpressPrinting System by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxCommonD7.bpl">ExpressPrinting System Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxExtCommonD7.bpl">ExpressPrinting System Extended Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxGridLnkD7.bpl">ExpressPrinting System ReportLink for ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxPivotGridLnkD7.bpl">ExpressPrinting System ReportLink for ExpressPivotGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxSchedulerLnkD7.bpl">ExpressPrinting System ReportLink for ExpressScheduler by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxSSLnkD7.bpl">ExpressPrinting System ReportLink for ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxTLLnkD7.bpl">ExpressPrinting System ReportLink for ExpressQuantumTreeList by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPScxVGridLnkD7.bpl">ExpressPrinting System ReportLink for ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSDBTeeChartD7.bpl">ExpressPrinting System ReportLink for DBTeeChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSdxDBOCLnkD7.bpl">ExpressPrinting System ReportLinks for ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSdxDBTVLnkD7.bpl">ExpressPrinting System ReportLink for ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSdxFCLnkD7.bpl">ExpressPrinting System ReportLinks for ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSdxLCLnkD7.bpl">ExpressPrinting System ReportLink for ExpressLayoutControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSdxOCLnkD7.bpl">ExpressPrinting System ReportLinks for ExpressOrgChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSLnksD7.bpl">ExpressPrinting System ReportLinks (Standard) by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPsPrVwAdvD7.bpl">ExpressPrinting System Advanced Preview Window by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSPrVwRibbonD7.bpl">ExpressPrinting System Ribbon Preview Window by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxPSTeeChartD7.bpl">ExpressPrinting System ReportLink for TeeChart by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxRibbonD7.bpl">ExpressBars Ribbon controls by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxServerModeD7.bpl">ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinsCoreD7.bpl">ExpressSkins Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinscxEditorsHelperD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for ExpressEditors by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinscxPCPainterD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for PageControl Painter by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinscxSchedulerPainterD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Scheduler Painter by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinsDesignHelperD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinsdxBarsPaintersD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Bars Painters by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinsdxNavBarPainterD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for NavBar Painter by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSkinsdxRibbonPaintersD7.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Ribbon Painters by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxSpellCheckerD7.bpl">ExpressSpellChecker 2 by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxTabbedMDID7.bpl">ExpressBars Tabbed MDI by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxTileControlD7.bpl">ExpressTileControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxtrmdD7.bpl">ExpressTreePrintedDataSet by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dcldxWizardControlD7.bpl">ExpressWizardControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclECQDBCD7.bpl">ExpressQuantumDBControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclEQDBTLD7.bpl">ExpressQuantumDBTreeList by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclEQGridD7.bpl">ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclEQTLD7.bpl">ExpressQuantumTreeList by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\DclTeePro811.bpl">TeeChart Pro 8 Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dclXMLSWFGaugesD7.bpl">Axoft - XML/SWF Gauge DesignTime</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxPScxPCProdD7.bpl">ExpressPrinting System ContainerProducer for ExpressPageControl by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinCoffeeD7.bpl">ExpressSkins - Coffee Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinDarkRoomD7.bpl">ExpressSkins - Darkroom Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinDarkSideD7.bpl">ExpressSkins - DarkSide Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinDevExpressDarkStyleD7.bpl">ExpressSkins - DevExpressDarkStyle Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinDevExpressStyleD7.bpl">ExpressSkins - DevExpressStyle Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinFoggyD7.bpl">ExpressSkins - Foggy Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinGlassOceansD7.bpl">ExpressSkins - GlassOceans Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinHighContrastD7.bpl">ExpressSkins - HighContrast Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkiniMaginaryD7.bpl">ExpressSkins - iMaginary Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinLilianD7.bpl">ExpressSkins - Lilian Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinLiquidSkyD7.bpl">ExpressSkins - LiquidSky Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinLondonLiquidSkyD7.bpl">ExpressSkins - LondonLiquidSky Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinMcSkinD7.bpl">ExpressSkins - McSkin Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinMoneyTwinsD7.bpl">ExpressSkins - MoneyTwins Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinOffice2007BlackD7.bpl">ExpressSkins - Office2007Black Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinOffice2007BlueD7.bpl">ExpressSkins - Office2007Blue Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\dxSkinOffice2007GreenD7.bpl">ExpressSkins - Office2007Green Skin by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\AxoftComponentsTerceros\Bpl\SynEdit_D2006.bpl">SynEdit component suite</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\AstorWizard.bpl">(untitled)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\dclActionsD7.bpl">Astor Acciones 7.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\dclAstorADOClienteD7.bpl">Astor ADO Cliente 7.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\dclAstorADOServerD7.bpl">Astor ADO Server 1.0</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\vclDestOptionsDlgTgD7.bpl">Astor - Destination Options</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Ax\master\Astor\Bpl\VCLPlannerD7.bpl">TPlannerTg</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

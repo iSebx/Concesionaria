@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/16 10:17:40.395,=C:\Users\sliotta\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/05/16 10:22:27.631,=C:\Users\sliotta\Documents\RAD Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2019/05/16 12:01:36.470,C:\Users\sliotta\Documents\Seb\Proyect\DelphiAutos\Capacitacion\Validador\uValidator.pas=C:\Users\sliotta\Documents\RAD Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2019/05/16 12:01:50.387,C:\Users\sliotta\Documents\Seb\Proyect\DelphiAutos\Capacitacion\Validador\test\uMain.pas=C:\Users\sliotta\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/05/16 12:01:50.387,C:\Users\sliotta\Documents\Seb\Proyect\DelphiAutos\Capacitacion\Validador\test\uMain.dfm=C:\Users\sliotta\Documents\RAD Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2019/05/16 12:01:58.836,C:\Users\sliotta\Documents\Seb\Proyect\DelphiAutos\Capacitacion\Validador\ValidatorTest.dproj=C:\Users\sliotta\Documents\RAD Studio\Projects\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
